@@ -22,7 +22,7 @@ const qrEstadisticaSchema = new mongoose.Schema({
 const Qr = mongoose.model('data_qr', qrSchema);
 const QrEstadisticas = mongoose.model('data_qr_estadistica', qrEstadisticaSchema);
 const secretKey = 'abc123$';
-const baseUrl = "http://172.16.0.182:3000"
+const baseUrl = "http://184.172.116.174:3001"
 // const baseUrl = "http://localhost:3000"
 
 exports.crearToken = async function (req, res) {
@@ -202,6 +202,21 @@ function createIdUnique() {
     id += "@" + formattedDate
     return id
 }
+
+exports.index = async function (req, res) {
+
+    fs.readFile('./exito.html', function(err, data) {
+        if (err) {
+          res.writeHead(404);
+          res.write('Archivo no encontrado');
+        } else {
+          res.writeHead(200, {'Content-Type': 'text/html'});
+          res.write(data);
+        }
+        res.end();
+      });
+};
+
 
 
 
