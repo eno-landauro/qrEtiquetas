@@ -1,0 +1,22 @@
+{
+  "name": "QR_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.0",
+    "pug": "^3.0.2",
+    "qrcode": "^1.5.1",
+    "sweetalert2": "^11.7.3"
+  }
+}
